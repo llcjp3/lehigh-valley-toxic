@@ -5,7 +5,85 @@
 @media(max-width:620px){body{background-attachment:scroll}body:before{background-attachment:scroll}.section.alt{background-attachment:scroll}.navin{height:68px}.brand img{width:47px;height:47px}.brand span{font-size:16px}.brand em{font-size:8px;letter-spacing:2px}.menu{display:block}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;padding:12px 4% 18px;background:#07050a;border-bottom:1px solid var(--line);grid-template-columns:repeat(2,1fr);gap:4px 14px}.navlinks.open{display:grid}.navlinks a{padding:12px 8px;border-bottom:1px solid #ffffff13}.hero-grid{grid-template-columns:1fr;padding:39px 0 35px;gap:18px}.hero-copy-wrap{order:2}.hero-art{order:1}.hero-art img{width:min(100%,360px);max-height:360px}.art-caption{bottom:0;font-size:8px}.hero h1{font-size:clamp(53px,14vw,78px);margin:17px 0}.hero-copy{font-size:14px}.hero-actions .btn{flex:1;min-width:145px}.tickerin{justify-content:center;font-size:10px;gap:10px}.section{padding:53px 0}.section-head{display:block}.section-head p{margin-top:14px}.feature-grid{grid-template-columns:1fr 1fr;gap:10px}.feature{padding:17px;min-height:190px}.feature .num{font-size:36px}.feature h3{font-size:23px;margin:19px 0 8px}.feature p{font-size:12px}.schedule-grid{grid-template-columns:1fr}.panel{padding:18px}.sponsor-grid{grid-template-columns:1fr}.sponsor{min-height:155px}.sponsor-cta{display:block}.sponsor-cta .btn{margin-top:15px}.logos{grid-template-columns:repeat(2,1fr)}.logo-tile{min-height:130px}.logo-tile img{max-height:130px}.join{grid-template-columns:1fr}.join .btn{width:100%}.footerin{display:block;text-align:center}.footer-brand{margin-bottom:10px}.footerin div+div{margin-top:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Barlow+Condensed:wght@700;800;900&display=swap');:root{--display:'Black Ops One',Impact,'Arial Narrow',sans-serif}h1,h2,h3,.brand span,.eyebrow,.kicker{font-family:'Black Ops One',Impact,'Arial Narrow',sans-serif}body{background-image:linear-gradient(#07050ab0,#07050ab0),url('toxic-outbreak-background.png')}body:before{background:linear-gradient(#07050a99,#07050a99),url('toxic-outbreak-background.png') center/cover fixed}.hero{background-image:linear-gradient(90deg,#050408d9,#09040ba8),url('toxic-outbreak-homepage.png')}
-</style></head><body><div class="topline"></div>
+
+/* Professional mobile and responsive polish */
+.hero{background-image:linear-gradient(180deg,rgba(5,3,8,.76),rgba(5,3,8,.92)),url("toxic-outbreak-background.png");background-position:center;background-size:cover}
+.hero:before{opacity:.14}
+.hero-art img{width:min(100%,520px);max-height:520px;object-fit:contain}
+.hero-copy-wrap{min-width:0}
+.hero h1{overflow-wrap:normal}
+.navlinks a:focus-visible,.btn:focus-visible,.menu:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+#record-manager{width:min(1180px,92%);border-radius:4px}
+#record-manager input,#record-manager textarea{font:inherit;border-radius:3px;min-width:0}
+#record-manager label{font-size:12px;font-weight:800;color:#eee5f8}
+#record-manager h2{font-size:clamp(30px,4vw,44px);line-height:1.05;margin:4px 0 12px}
+#record-manager .btn{cursor:pointer}
+@media(max-width:850px){.navin{gap:12px}.navlinks{gap:10px}.navlinks a{white-space:nowrap}.hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,.9fr)}.hero-art img{max-height:390px}}
+@media(max-width:620px){
+ html{scroll-padding-top:72px}
+ .nav{position:sticky;top:0}
+ .navin{height:70px;gap:10px}
+ .brand{gap:10px;flex:1}
+ .brand img{width:44px;height:44px;flex:0 0 44px}
+ .brand span{font-size:clamp(13px,4vw,16px);letter-spacing:.7px;white-space:nowrap}
+ .brand em{font-size:7px;letter-spacing:1.5px}
+ .menu{display:block;flex:0 0 auto;min-width:48px;min-height:46px}
+ .navlinks{display:none!important;position:absolute;top:70px;left:0;right:0;padding:12px 4% 16px;background:rgba(7,5,10,.98);border-bottom:1px solid var(--line);grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 10px;box-shadow:0 14px 28px #0009}
+ .navlinks.open{display:grid!important}
+ .navlinks a{white-space:normal;padding:12px 10px;border:1px solid #ffffff12;border-radius:3px;font-size:11px}
+ .hero{background-image:linear-gradient(180deg,rgba(5,3,8,.8),rgba(5,3,8,.95)),url("toxic-outbreak-background.png");background-position:center;background-size:cover}
+ .hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:18px;padding:25px 0 28px}
+ .hero-art{order:0;width:100%;margin:0 auto;padding:0 0 9px}
+ .hero-art:before{inset:15%;filter:blur(32px)}
+ .hero-art img{width:min(100%,330px);max-height:none;aspect-ratio:1/1;object-fit:contain;filter:drop-shadow(0 8px 22px #000b) drop-shadow(0 0 22px #8e20e833)}
+ .art-caption{position:static;transform:none;white-space:normal;text-align:center;width:max-content;max-width:100%;margin:8px auto 0;padding:6px 10px;font-size:7px;letter-spacing:1.6px}
+ .hero-copy-wrap{order:1;text-align:center;width:100%}
+ .eyebrow{font-size:9px;letter-spacing:1.8px;line-height:1.8}
+ .eyebrow:before{width:14px;margin-right:6px}
+ .hero h1{font-size:clamp(54px,15vw,82px);line-height:.86;letter-spacing:-1px;margin:16px 0 12px;text-shadow:3px 4px 0 #421064,0 0 18px #a5ff0025}
+ .hero h1 .line2{letter-spacing:-1.5px}
+ .hero h1 .line3{font-size:.43em;letter-spacing:3px;line-height:1.6}
+ .hero-copy{font-size:14px;line-height:1.6;margin:0 auto;max-width:420px}
+ .hero-actions{display:grid;grid-template-columns:1fr;gap:10px;margin:20px 0 15px}
+ .hero-actions .btn{width:100%;min-height:46px}
+ .hero-meta{font-size:9px;line-height:1.9;letter-spacing:1px}
+ .tickerin{justify-content:center;text-align:center;gap:7px 12px;padding:12px 0;font-size:9px;letter-spacing:1px}
+ .section{padding:44px 0}
+ .section-head{margin-bottom:22px}
+ .section-head h2{font-size:clamp(34px,10vw,48px);line-height:.98}
+ .feature-grid{grid-template-columns:1fr;gap:12px}
+ .feature{min-height:0;padding:20px}
+ .feature h3{margin:14px 0 8px}
+ .schedule-grid{grid-template-columns:minmax(0,1fr);gap:14px}
+ .game{grid-template-columns:58px minmax(0,1fr);gap:10px}
+ .game .status{grid-column:2;justify-self:start}
+ .results{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #record-manager{margin:0 auto 28px!important;padding:17px!important;width:92%}
+ #record-manager>div[style*="repeat(3"]{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px!important}
+ #record-manager input{padding:9px 6px!important}
+ #record-manager .btn{width:100%}
+ .sponsor-grid,.logos{grid-template-columns:1fr 1fr;gap:10px}
+ .sponsor{min-height:135px;padding:22px 12px}
+ .sponsor strong{font-size:clamp(22px,6vw,30px)}
+ .sponsor-cta{padding:18px}
+ .logo-tile{min-height:120px;padding:9px}
+ .logo-tile img{max-height:110px}
+ .join{padding:24px 20px;gap:18px}
+ .footerin{display:grid;gap:12px;text-align:center}
+ .footerin div+div{margin-top:0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+</style>
+<style id="toxic-final-polish">
+/* Final responsive polish: clean spacing, readable type, and reliable mobile menu. */
+html{scroll-padding-top:84px} body{overflow-x:hidden} .wrap{width:min(1160px,92%)}
+.navin{position:relative;min-width:0}.brand{flex:0 1 auto}.navlinks{flex-shrink:0}.hero{background-image:linear-gradient(90deg,rgba(5,3,8,.88),rgba(5,3,8,.62)),url("toxic-outbreak-homepage.png");background-position:center;background-size:cover}.hero-grid{min-height:560px}.hero-copy-wrap{position:relative;z-index:2}.hero h1{line-height:.98;letter-spacing:-.5px}.hero-art img{max-width:100%;height:auto}.section{background-color:rgba(7,5,10,.88)}
+@media(max-width:900px){.navin{gap:12px}.brand span{font-size:16px}.navlinks{gap:12px;font-size:10px;letter-spacing:.6px}.hero-grid{gap:18px}.hero h1{font-size:clamp(48px,7vw,76px)}.hero-copy{font-size:14px}}
+@media(max-width:680px){html{scroll-padding-top:72px}.nav{position:sticky;top:0}.navin{height:68px;gap:8px}.brand{gap:8px;min-width:0}.brand img{width:42px;height:42px;flex:0 0 42px}.brand span{font-size:15px;white-space:nowrap}.brand em{font-size:7px;letter-spacing:1.4px}.menu{display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:42px;padding:0;font-size:24px;cursor:pointer}.navlinks{display:none;position:absolute;top:68px;left:-4.35%;right:-4.35%;width:auto;padding:10px 4% 16px;background:rgba(7,5,10,.98);border-bottom:1px solid var(--line);box-shadow:0 16px 30px #000a;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 12px;z-index:30}.navlinks.open{display:grid}.navlinks a{display:block;min-width:0;padding:13px 10px;border:1px solid #ffffff14;border-radius:4px;font-size:11px;white-space:normal}.navcta{display:none}.hero{background-image:linear-gradient(180deg,rgba(5,3,8,.58),rgba(5,3,8,.91)),url("toxic-outbreak-homepage.png");background-position:center;background-size:cover}.hero-grid{min-height:0;grid-template-columns:minmax(0,1fr);gap:8px;padding:26px 0 34px}.hero-art{order:1;min-width:0}.hero-art img{width:min(82vw,320px);max-height:310px;object-fit:contain}.art-caption{position:relative;left:auto;bottom:auto;transform:none;margin-top:-2px;white-space:normal;text-align:center;max-width:100%;font-size:8px;letter-spacing:1.5px}.hero-copy-wrap{order:2;text-align:center}.eyebrow{font-size:9px;letter-spacing:1.6px}.eyebrow:before{display:none}.hero h1{font-size:clamp(48px,13vw,72px);line-height:.96;margin:14px 0 12px;letter-spacing:0}.hero h1 .line3{font-size:.43em;letter-spacing:2px;line-height:1.5}.hero-copy{font-size:14px;line-height:1.65;max-width:460px;margin:0 auto}.hero-actions{display:grid;grid-template-columns:1fr;gap:10px;margin:18px auto 14px;max-width:340px}.hero-actions .btn{width:100%;min-height:46px}.hero-meta{font-size:9px;letter-spacing:1px;line-height:1.8}.tickerin{gap:8px;padding:12px 0;font-size:9px;letter-spacing:1px}.section{padding:46px 0}.section-head h2,.join h2{font-size:clamp(32px,9vw,46px);line-height:1.05}.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.feature{min-width:0;padding:14px;min-height:0}.feature h3{font-size:18px;line-height:1.15}.feature p{font-size:12px;line-height:1.5}.panel{padding:16px}.results{grid-template-columns:repeat(2,minmax(0,1fr))}.game{grid-template-columns:54px minmax(0,1fr);gap:8px}.game .status{grid-column:2;justify-self:start}.sponsor-grid{grid-template-columns:1fr}.sponsor{min-height:0;padding:20px}.logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.logo-tile{min-width:0;min-height:120px;padding:12px}.logo-tile img{max-height:100px}.join{grid-template-columns:1fr;gap:16px}.join .btn{width:100%}.footerin{display:grid;gap:12px;text-align:center}.footerin div+div{margin-top:0}.footer-brand{font-size:17px}}
+@media(max-width:360px){.brand span{font-size:13px}.brand em{letter-spacing:1px}.hero h1{font-size:47px}.feature-grid{grid-template-columns:1fr}.hero-art img{width:min(78vw,270px)}}
+</style>
+</head><body><div class="topline"></div>
 <header class="nav"><div class="wrap navin"><a class="brand" href="#home" aria-label="Lehigh Valley Toxic home"><img src="toxic-skull-thumbnail.png" alt="Toxic skull mascot"><span>LEHIGH VALLEY<em>ADULT COED SLOWPITCH</em></span></a><nav class="navlinks" id="navlinks"><a href="#about">About</a><a href="#schedule">Schedule</a><a href="#sponsors">Sponsors</a><a href="#logos">Brand</a><a href="#contact">Contact</a></nav><a class="navcta" href="#contact">Join the Toxic</a><button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button></div></header>
 <main id="home"><section class="hero"><div class="wrap hero-grid"><div class="hero-copy-wrap"><div class="eyebrow">Lehigh Valley, Pennsylvania · Est. 2026</div><h1>ALL <span class="line2">TOXIC.</span><span class="line3">ALL IN!</span></h1><p class="hero-copy">Adult coed slow-pitch softball with a style all our own. Purple poison. Neon venom. Built for the diamond, driven by the Valley.</p><div class="hero-actions"><a class="btn" href="#schedule">View Schedule ↗</a><a class="btn ghost" href="#sponsors">Meet Our Sponsors</a></div><div class="hero-meta"><b>Adult Coed</b> &nbsp;•&nbsp; <b>Slow-Pitch</b> &nbsp;•&nbsp; <b>Est. 2026</b></div></div><div class="hero-art"><img src="toxic-full-logo.jpeg" alt="Original Lehigh Valley Toxic crowned skull and crossed bats team logo"><div class="art-caption">OFFICIAL TEAM MARK · ORIGINAL ARTWORK</div></div></div></section>
 <div class="ticker"><div class="wrap tickerin"><span>◆ Purple Dirt</span><span>Neon Lights</span><span>◆ Toxic Nights</span><span>Lehigh Valley, PA</span><span>◆ All Toxic! All In!</span></div></div>
