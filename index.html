@@ -25,6 +25,49 @@
 @media(max-width:560px){.roster-grid{grid-template-columns:1fr}.player-toggle{grid-template-columns:76px 1fr auto;gap:12px}.player-thumb{width:76px;height:100px}}
 </style>
 
+
+<style id="lv-toxic-sitewide-biohazard">
+/* Site-wide outbreak atmosphere: applies across all website sections/pages */
+html, body {
+  background-color: #07040b !important;
+  background-image:
+    radial-gradient(ellipse at 15% 18%, rgba(133, 0, 255, .18), transparent 42%),
+    radial-gradient(ellipse at 85% 72%, rgba(166, 255, 0, .12), transparent 40%),
+    linear-gradient(rgba(5, 3, 9, .82), rgba(5, 3, 9, .9)),
+    url("toxic-outbreak-background.png") !important;
+  background-size: auto, auto, auto, cover !important;
+  background-position: center, center, center, center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .18;
+  background:
+    radial-gradient(circle at 12% 28%, transparent 0 34px, rgba(166,255,0,.20) 35px 37px, transparent 38px),
+    radial-gradient(circle at 88% 68%, transparent 0 48px, rgba(166,255,0,.16) 49px 51px, transparent 52px),
+    repeating-linear-gradient(135deg, transparent 0 80px, rgba(141,0,255,.06) 81px 83px, transparent 84px 160px);
+}
+body > * { position: relative; z-index: 1; }
+header, nav, .site-header, .navbar {
+  background-color: rgba(7, 4, 11, .94) !important;
+  backdrop-filter: blur(8px);
+}
+section, .section, main, footer, .card, .panel, .sponsor, .roster-card {
+  background-color: transparent;
+}
+.section, .sponsor, .roster-card, .card, .panel {
+  border-color: rgba(166,255,0,.35);
+}
+@media (max-width: 700px) {
+  html, body { background-attachment: scroll !important; }
+}
+</style>
+
 </head><body><div class="topline"></div>
 <header class="nav"><div class="wrap navin"><a class="brand" href="#home" aria-label="Lehigh Valley Toxic home"><img src="toxic-skull-thumbnail.png" alt="Toxic skull mascot"><span>LEHIGH VALLEY<em>ADULT COED SLOWPITCH</em></span></a><nav class="navlinks" id="navlinks"><a href="#about">About</a><a href="#roster">Roster</a><a href="#schedule">Schedule & Scores</a><a href="#news">Team News</a><a href="#gallery">Gallery</a><a href="#sponsors">Sponsors</a><a href="#shop">Merch</a><a href="#contact">Contact</a></nav><a class="navcta" href="#contact">Join the Toxic</a><button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button></div></header>
 <main id="home"><section class="hero"><div class="wrap hero-grid"><div class="hero-copy-wrap"><div class="eyebrow">Lehigh Valley, Pennsylvania · Est. 2026</div><h1>ALL <span class="line2">TOXIC.</span><span class="line3">ALL IN!</span></h1><p class="hero-copy">Adult coed slow-pitch softball with a style all our own. Purple poison. Neon venom. Built for the diamond, driven by the Valley.</p><div class="hero-actions"><a class="btn" href="#schedule">View Schedule ↗</a><a class="btn ghost" href="#sponsors">Meet Our Sponsors</a></div><div class="hero-meta"><b>Adult Coed</b> &nbsp;•&nbsp; <b>Slow-Pitch</b> &nbsp;•&nbsp; <b>Est. 2026</b></div></div><div class="hero-art"><img src="toxic-full-logo.jpeg" alt="Original Lehigh Valley Toxic crowned skull and crossed bats team logo"><div class="art-caption">OFFICIAL TEAM MARK · ORIGINAL ARTWORK</div></div></div></section>
@@ -71,7 +114,14 @@
 <section class="section" id="gallery"><div class="wrap"><div class="section-head"><div><div class="kicker">Game day. Toxic style.</div><h2>Photo & <span>video gallery</span></h2></div><p>Team photos, uniforms, tournament highlights, and video clips will live here.</p></div><div class="logos"><div class="logo-tile"><img src="embedded-2.jpg" alt="Lehigh Valley Toxic team artwork"><span>Team artwork</span></div><div class="logo-tile"><img src="embedded-3.jpg" alt="Toxic team logo artwork"><span>Official marks</span></div><div class="logo-tile"><img src="embedded-4.jpg" alt="Toxic branding artwork"><span>Brand gallery</span></div><div class="logo-tile"><img src="embedded-5.jpg" alt="Toxic wordmark artwork"><span>Toxic identity</span></div></div><div style="margin-top:18px"><a class="btn ghost" href="mailto:llc.jp3@gmail.com?subject=Lehigh%20Valley%20Toxic%20Gallery%20Submission">Send Photos or Videos ↗</a></div></div></section>
 <section class="section alt" id="shop"><div class="wrap"><div class="section-head"><div><div class="kicker">Rep the Valley</div><h2>Toxic <span>merchandise</span></h2></div><p>Official team gear and merchandise. The online store is coming soon; contact us for current availability.</p></div><div class="feature-grid"><article class="feature"><div class="num">01</div><h3>Team Apparel</h3><p>Jerseys, tees, hoodies, and Toxic gear in purple, neon green, and black.</p></article><article class="feature"><div class="num">02</div><h3>Hats & Accessories</h3><p>Official player caps and fan gear featuring original team artwork.</p></article><article class="feature"><div class="num">03</div><h3>Get Merch Updates</h3><p>Ask about upcoming drops, pricing, and ordering.</p><a class="arrow" href="mailto:llc.jp3@gmail.com?subject=Toxic%20Merchandise%20Inquiry">Ask about gear ↗</a></article></div></div></section>
 
-<section class="section" id="sponsors"><div class="wrap"><div class="section-head"><div><div class="kicker">Local support. Toxic pride.</div><h2>Our <span>partners</span></h2></div><p>We appreciate the businesses backing Lehigh Valley Toxic. Interested in putting your brand in the game? Let's talk.</p></div><div class="sponsor-grid"><div class="sponsor"><strong class="ds">D&amp;S Beverages</strong><small>Official team sponsor</small></div><div class="sponsor"><strong class="ih"><b>iHeart</b>Media</strong><small>Official team sponsor</small></div></div><div class="sponsor-cta"><div><h3>Put your business in the Toxic zone.</h3><p>Ask about sponsorship opportunities and team partnerships.</p></div><a class="btn ghost" href="mailto:llc.jp3@gmail.com?subject=Lehigh%20Valley%20Toxic%20Sponsorship">Sponsor Toxic ↗</a></div></div></section>
+<section class="section" id="sponsors"><div class="wrap">
+<div class="section-head"><div><div class="kicker">Local support. Toxic pride.</div><h2>Powered by our <span>partners</span></h2></div><p>We’re proud to recognize the businesses supporting Lehigh Valley Toxic. Their partnership helps keep our team moving on and off the field.</p></div>
+<div class="sponsor-grid sponsor-grid-featured">
+<article class="sponsor sponsor-ds"><img class="sponsor-logo ds-logo" src="ds-beverages-logo.jpeg" alt="D&amp;S Beverages official logo"><div class="sponsor-name ds">D&amp;S Beverages</div><small>OFFICIAL BEER STORE</small><p>Official beer store of Lehigh Valley Toxic.</p></article>
+<article class="sponsor sponsor-iheart"><div class="sponsor-mark iheart-mark"><span>i</span>Heart</div><div class="sponsor-name ih">iHeart<b>Media</b></div><small>OFFICIAL MEDIA COMPANY</small><p>Official media company of Lehigh Valley Toxic.</p></article>
+</div>
+<div class="sponsor-cta sponsor-cta-featured"><div><div class="kicker">Join the lineup</div><h3>Put your business in the Toxic zone.</h3><p>Interested in sponsoring Lehigh Valley Toxic? Contact us to discuss available opportunities and team partnerships.</p></div><a class="btn ghost" href="mailto:llc.jp3@gmail.com?subject=Lehigh%20Valley%20Toxic%20Sponsorship">Become a Sponsor ↗</a></div>
+</div></section>
 <section class="section alt" id="logos"><div class="wrap"><div class="section-head"><div><div class="kicker">Official artwork</div><h2>One brand.<br><span>Four original marks.</span></h2></div><p>The supplied Toxic logos are used as provided. The website's colors, typography, textures, and layout are custom-styled around them.</p></div><div class="logos"><div class="logo-tile"><img src="toxic-full-logo.jpeg" alt="Original full Toxic logo"><span>Full team logo</span></div><div class="logo-tile"><img src="toxic-skull.jpeg" alt="Original Toxic skull mascot"><span>Skull mascot</span></div><div class="logo-tile"><img src="toxic-badge-logo.jpeg" alt="Original Toxic badge logo"><span>Badge mark</span></div><div class="logo-tile"><img src="toxic-wordmark.jpeg" alt="Original Toxic wordmark"><span>Wordmark</span></div></div></div></section>
 <section class="section" id="contact"><div class="wrap"><div class="join"><div><div class="kicker">Got the Toxic energy?</div><h2>All Toxic.<br><span>All In!</span></h2><p>For player inquiries, sponsorship opportunities, or general questions, reach out to the team by email. More roster and gear details can be added as they're confirmed.</p></div><a class="btn" href="mailto:llc.jp3@gmail.com?subject=Lehigh%20Valley%20Toxic%20Inquiry">Email the Team ↗</a></div></div></section></main>
 <footer class="footer"><div class="wrap footerin"><div><div class="footer-brand">LEHIGH VALLEY <span>TOXIC</span></div><div>Adult Coed Slow-Pitch · Est. 2026</div></div><div>Allentown · Bethlehem · Easton · Pennsylvania<br><a href="#roster">Roster</a> · <a href="#news">News</a> · <a href="#gallery">Gallery</a> · <a href="#shop">Merch</a></div><div><a href="mailto:llc.jp3@gmail.com">llc.jp3@gmail.com</a><br>ALL TOXIC! ALL IN!</div></div></footer>
@@ -114,4 +164,28 @@ document.querySelectorAll('details.player-card > summary.player-toggle').forEach
 .player-details,
 .player-expanded { overflow:visible; }
 .player-card { height:auto; }
+</style>
+
+<style>
+/* Featured sponsor showcase */
+.sponsor-grid-featured{gap:20px;align-items:stretch}
+.sponsor-grid-featured .sponsor{min-height:275px;padding:42px 28px 25px;border-radius:3px;isolation:isolate}
+.sponsor-grid-featured .sponsor:before{content:"PROUD TEAM PARTNER";font-size:10px;letter-spacing:2.5px}
+.sponsor-grid-featured .sponsor:after{content:"";position:absolute;inset:0;z-index:-1;opacity:.13;background:repeating-linear-gradient(135deg,transparent 0 18px,#a5ff00 19px 20px,transparent 21px 38px)}
+.sponsor-mark{display:grid;place-items:center;width:76px;height:76px;border:2px solid #a5ff00;border-radius:50%;font:900 23px var(--display);color:#a5ff00;letter-spacing:-1px;margin:4px 0 12px;box-shadow:0 0 24px #a5ff0022}
+.iheart-mark{border-color:#ff344a;color:#fff;font-size:21px}.iheart-mark span{color:#ff344a}
+.sponsor-grid-featured .sponsor-name{font:900 clamp(27px,3.5vw,42px) var(--display);line-height:1.05;text-align:center;margin:0 0 9px}
+.sponsor-grid-featured .sponsor .ds{color:#f7f3ff;text-shadow:2px 2px #5e6f8d}
+.sponsor-grid-featured .sponsor .ih{color:#fff}.sponsor-grid-featured .sponsor .ih b{color:#ff344a}
+.sponsor-grid-featured .sponsor small{font-size:9px;color:var(--green);font-weight:900;letter-spacing:2px}
+.sponsor-grid-featured .sponsor p{max-width:340px;color:var(--muted);font-size:12px;line-height:1.7;margin:12px auto 0}
+.sponsor-cta-featured{align-items:center;border-color:#a5ff0066;background:linear-gradient(105deg,#20102d,#0b080e 72%);padding:26px}
+.sponsor-cta-featured .kicker{margin-bottom:7px}.sponsor-cta-featured h3{font-size:clamp(22px,3vw,30px)}
+.sponsor-cta-featured p{max-width:590px;line-height:1.7;margin-top:7px}
+@media(max-width:640px){.sponsor-grid-featured{grid-template-columns:1fr}.sponsor-grid-featured .sponsor{min-height:250px}.sponsor-cta-featured{align-items:flex-start;flex-direction:column}.sponsor-cta-featured .btn{width:100%;text-align:center;justify-content:center}}
+</style>
+
+<style>
+.ds-logo{display:block;width:min(100%,300px);height:auto;max-height:220px;object-fit:contain;background:#fff;border-radius:8px;padding:8px;margin:8px auto 18px}
+.sponsor-ds{overflow:hidden}
 </style>
