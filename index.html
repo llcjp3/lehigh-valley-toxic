@@ -146,8 +146,8 @@ document.querySelectorAll('details.player-card > summary.player-toggle').forEach
 </style>
 
 <!-- LV Toxic original outbreak ambience player -->
-<div id="lv-toxic-audio-player" aria-label="LV Toxic outbreak soundtrack">
-  <button id="lv-toxic-audio-toggle" type="button" aria-label="Play outbreak soundtrack" title="Play outbreak soundtrack">▶ <span>OUTBREAK AUDIO</span></button>
+<div id="lv-toxic-audio-player" aria-label="LV Toxic biohazard alert audio">
+  <button id="lv-toxic-audio-toggle" type="button" aria-label="Play Toxic biohazard alert audio" title="Play Toxic biohazard alert audio">▶ <span>TOXIC ALERT AUDIO</span></button>
   <label class="lv-toxic-volume" for="lv-toxic-audio-volume">VOL</label>
   <input id="lv-toxic-audio-volume" type="range" min="0" max="100" value="35" aria-label="Soundtrack volume">
   <audio id="lv-toxic-audio" src="toxic-outbreak-ambience.wav" loop preload="auto"></audio>
@@ -169,8 +169,8 @@ document.querySelectorAll('details.player-card > summary.player-toggle').forEach
  audio.volume=Number(volume.value)/100;
  volume.addEventListener('input',()=>audio.volume=Number(volume.value)/100);
  function setState(playing){
-   toggle.innerHTML=(playing?'❚❚':'▶')+' <span>'+(playing?'OUTBREAK AUDIO ON':'OUTBREAK AUDIO')+'</span>';
-   toggle.setAttribute('aria-label',playing?'Pause outbreak soundtrack':'Play outbreak soundtrack');
+   toggle.innerHTML=(playing?'❚❚':'▶')+' <span>'+(playing?'TOXIC ALERT ON':'TOXIC ALERT AUDIO')+'</span>';
+   toggle.setAttribute('aria-label',playing?'Pause Toxic biohazard alert audio':'Play Toxic biohazard alert audio');
  }
  toggle.addEventListener('click',async()=>{
    if(audio.paused){try{await audio.play();setState(true)}catch(e){setState(false)}}
