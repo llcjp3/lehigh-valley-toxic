@@ -17,6 +17,7 @@
 .player-tag{display:inline-block;margin-top:7px;padding:4px 7px;border:1px solid #a5ff00;border-radius:3px;color:#a5ff00;font-size:10px;font-weight:900;letter-spacing:.08em}
 .player-chevron{color:#a5ff00;font-size:22px;transition:transform .2s}
 .player-card[open] .player-chevron{transform:rotate(180deg)}
+.player-card:before{pointer-events:none}.player-toggle{list-style:none;-webkit-tap-highlight-color:transparent;touch-action:manipulation}.player-toggle::-webkit-details-marker{display:none}.player-card[open] .player-details{display:block}
 .player-details{padding:0 14px 16px;border-top:1px solid rgba(165,255,0,.25)}
 .player-poster{display:block;width:100%;max-width:360px;height:auto;margin:14px auto 0;border:1px solid rgba(165,255,0,.4);border-radius:5px}
 .player-detail-note{font-size:13px;color:var(--muted);margin:12px 0 0}
@@ -74,7 +75,19 @@
 <section class="section alt" id="logos"><div class="wrap"><div class="section-head"><div><div class="kicker">Official artwork</div><h2>One brand.<br><span>Four original marks.</span></h2></div><p>The supplied Toxic logos are used as provided. The website's colors, typography, textures, and layout are custom-styled around them.</p></div><div class="logos"><div class="logo-tile"><img src="toxic-full-logo.jpeg" alt="Original full Toxic logo"><span>Full team logo</span></div><div class="logo-tile"><img src="toxic-skull.jpeg" alt="Original Toxic skull mascot"><span>Skull mascot</span></div><div class="logo-tile"><img src="toxic-badge-logo.jpeg" alt="Original Toxic badge logo"><span>Badge mark</span></div><div class="logo-tile"><img src="toxic-wordmark.jpeg" alt="Original Toxic wordmark"><span>Wordmark</span></div></div></div></section>
 <section class="section" id="contact"><div class="wrap"><div class="join"><div><div class="kicker">Got the Toxic energy?</div><h2>All Toxic.<br><span>All In!</span></h2><p>For player inquiries, sponsorship opportunities, or general questions, reach out to the team by email. More roster and gear details can be added as they're confirmed.</p></div><a class="btn" href="mailto:llc.jp3@gmail.com?subject=Lehigh%20Valley%20Toxic%20Inquiry">Email the Team ↗</a></div></div></section></main>
 <footer class="footer"><div class="wrap footerin"><div><div class="footer-brand">LEHIGH VALLEY <span>TOXIC</span></div><div>Adult Coed Slow-Pitch · Est. 2026</div></div><div>Allentown · Bethlehem · Easton · Pennsylvania<br><a href="#roster">Roster</a> · <a href="#news">News</a> · <a href="#gallery">Gallery</a> · <a href="#shop">Merch</a></div><div><a href="mailto:llc.jp3@gmail.com">llc.jp3@gmail.com</a><br>ALL TOXIC! ALL IN!</div></div></footer>
-<script>const menu=document.getElementById('menu'),links=document.getElementById('navlinks');menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));</script>
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('navlinks');
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
+document.querySelectorAll('details.player-card > summary.player-toggle').forEach(summary=>{
+  summary.setAttribute('role','button');
+  summary.setAttribute('tabindex','0');
+  const toggle=()=>{const card=summary.parentElement;card.open=!card.open;summary.setAttribute('aria-expanded',String(card.open));};
+  summary.addEventListener('click',event=>{event.preventDefault();toggle();});
+  summary.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();toggle();}});
+  summary.setAttribute('aria-expanded',String(summary.parentElement.open));
+});
+</script>
 <script>
 (()=>{const keys=['recWins','recLosses','recTies'];const get=()=>{try{return JSON.parse(localStorage.getItem('lvToxicRecords')||'{"wins":0,"losses":0,"ties":0,"games":[]}')}catch(e){return {wins:0,losses:0,ties:0,games:[]}}};const render=()=>{const d=get();recWins.value=d.wins;recLosses.value=d.losses;recTies.value=d.ties;recSummary.textContent=`${d.wins}–${d.losses}–${d.ties}`;recResults.innerHTML=d.games.map(g=>`<p style="border-top:1px solid #a5ff0038;padding:8px 0;margin:0">${g.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}</p>`).join('')};document.getElementById('saveRecord').addEventListener('click',()=>{const d=get();d.wins=Math.max(0,+recWins.value||0);d.losses=Math.max(0,+recLosses.value||0);d.ties=Math.max(0,+recTies.value||0);const g=recGame.value.trim();if(g)d.games.unshift(g);localStorage.setItem('lvToxicRecords',JSON.stringify(d));recGame.value='';render()});render()})();
 </script>
