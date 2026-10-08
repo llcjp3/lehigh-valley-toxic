@@ -96,3 +96,22 @@ document.querySelectorAll('details.player-card > summary.player-toggle').forEach
 </style>
 </body></html>
 <style>@media(max-width:620px){.hero{background-image:linear-gradient(180deg,#07050a18,#07050a55)!important}.hero-grid{padding-top:24px}.hero-art:before{inset:12%;filter:blur(28px)}.art-caption{letter-spacing:1.5px;padding:6px 10px}.hero-copy-wrap{text-align:center}.hero-copy{margin-inline:auto}.eyebrow{letter-spacing:1.8px;font-size:9px}.hero h1{margin:15px 0 13px}.hero-actions{justify-content:center}.hero-meta{line-height:1.8}}</style>
+
+<style>
+/* Full player posters: preserve the entire original artwork and its aspect ratio */
+.player-details img,
+.player-card .player-details img,
+.player-expanded img {
+  display:block;
+  width:100%;
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:center center;
+  aspect-ratio:auto !important;
+  background:#050309;
+}
+.player-details,
+.player-expanded { overflow:visible; }
+.player-card { height:auto; }
+</style>
