@@ -144,6 +144,45 @@ document.querySelectorAll('details.player-card > summary.player-toggle').forEach
 <style>
 @media(max-width:620px){.hero-art img{width:min(82vw,300px)}.hero-grid{gap:10px}.hero-art{margin-bottom:4px}.art-caption{max-width:92%;white-space:normal;text-align:center}.feature-grid{grid-template-columns:1fr}.feature{min-height:unset}.section-head h2{font-size:clamp(34px,10vw,48px)}.game{grid-template-columns:58px 1fr auto;gap:9px}.navlinks{max-height:75vh;overflow:auto}}
 </style>
+
+<!-- LV Toxic original outbreak ambience player -->
+<div id="lv-toxic-audio-player" aria-label="LV Toxic outbreak soundtrack">
+  <button id="lv-toxic-audio-toggle" type="button" aria-label="Play outbreak soundtrack" title="Play outbreak soundtrack">▶ <span>OUTBREAK AUDIO</span></button>
+  <label class="lv-toxic-volume" for="lv-toxic-audio-volume">VOL</label>
+  <input id="lv-toxic-audio-volume" type="range" min="0" max="100" value="35" aria-label="Soundtrack volume">
+  <audio id="lv-toxic-audio" src="toxic-outbreak-ambience.wav" loop preload="auto"></audio>
+</div>
+<style>
+#lv-toxic-audio-player{position:fixed;right:16px;bottom:16px;z-index:99999;display:flex;align-items:center;gap:9px;padding:10px 12px;background:rgba(8,5,13,.94);border:1px solid #a5ff00;box-shadow:0 0 18px rgba(165,255,0,.2);color:#f7f2ff;font:800 11px/1.2 system-ui,sans-serif;letter-spacing:1px}
+#lv-toxic-audio-toggle{border:0;background:transparent;color:#a5ff00;font:900 12px system-ui,sans-serif;cursor:pointer;display:flex;align-items:center;gap:8px;padding:2px}
+#lv-toxic-audio-toggle span{font-size:10px;letter-spacing:1.3px}
+#lv-toxic-audio-volume{width:70px;accent-color:#a5ff00}
+.lv-toxic-volume{font-size:9px;color:#bdb3c8}
+@media(max-width:520px){#lv-toxic-audio-player{right:8px;bottom:8px;padding:9px;gap:6px}#lv-toxic-audio-toggle span{max-width:82px;font-size:9px}#lv-toxic-audio-volume{width:48px}}
+</style>
+<script>
+(function(){
+ const audio=document.getElementById('lv-toxic-audio');
+ const toggle=document.getElementById('lv-toxic-audio-toggle');
+ const volume=document.getElementById('lv-toxic-audio-volume');
+ if(!audio||!toggle||!volume)return;
+ audio.volume=Number(volume.value)/100;
+ volume.addEventListener('input',()=>audio.volume=Number(volume.value)/100);
+ function setState(playing){
+   toggle.innerHTML=(playing?'❚❚':'▶')+' <span>'+(playing?'OUTBREAK AUDIO ON':'OUTBREAK AUDIO')+'</span>';
+   toggle.setAttribute('aria-label',playing?'Pause outbreak soundtrack':'Play outbreak soundtrack');
+ }
+ toggle.addEventListener('click',async()=>{
+   if(audio.paused){try{await audio.play();setState(true)}catch(e){setState(false)}}
+   else{audio.pause();setState(false)}
+ });
+ // Attempt autoplay; browsers may block audible autoplay until a user gesture.
+ audio.play().then(()=>setState(true)).catch(()=>setState(false));
+ audio.addEventListener('pause',()=>setState(false));
+ audio.addEventListener('play',()=>setState(true));
+})();
+</script>
+
 </body></html>
 <style>@media(max-width:620px){.hero{background-image:linear-gradient(180deg,#07050a18,#07050a55)!important}.hero-grid{padding-top:24px}.hero-art:before{inset:12%;filter:blur(28px)}.art-caption{letter-spacing:1.5px;padding:6px 10px}.hero-copy-wrap{text-align:center}.hero-copy{margin-inline:auto}.eyebrow{letter-spacing:1.8px;font-size:9px}.hero h1{margin:15px 0 13px}.hero-actions{justify-content:center}.hero-meta{line-height:1.8}}</style>
 
